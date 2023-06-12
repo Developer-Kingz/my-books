@@ -3,7 +3,7 @@ const savedCollection = localStorage.getItem('bookCollection');
 const bookCollection = savedCollection ? JSON.parse(savedCollection) : [];
 
 // Function to render the book list
-export default renderBookList = () => {
+const renderBookList = () => {
   const bookListElement = document.getElementById('bookListItems');
   bookListElement.innerHTML = '';
 
@@ -33,6 +33,7 @@ export default renderBookList = () => {
     bookListElement.appendChild(li);
   });
 };
+export default renderBookList;
 
 // Function to add a new book to the collection
 export const addBook = (title, author) => {
